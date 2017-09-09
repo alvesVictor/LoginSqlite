@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ALVES</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="add">Novo Usuário</string>
+    <string name="login">Login</string>
+    <string name="listar">Listar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="sucessoCadastro">Cadastro Realizado</string>
+    <string name="erroCadastro">Não foi possível cadastrar</string>
+    <string name="menu">MENU</string>
+    <string name="cadastro">CADASTRO</string>
+    <string name="erroLogin">Dados Inválidos</string>
+    <string name="sucessoLogin">Login com sucesso</string>
+    <string name="camposVazios">Campos não podem estar vazios</string>
+    <string name="sair">Sair</string>
+    <string name="alterar">Alterar</string>
+    <string name="inserir">Inserir Usuário</string>
+    <string name="alteração">ALTERAR</string>
+    <string name="sucessoAlterar">Alteração realizada com sucesso</string>
+    <string name="erroAlterar">Não foi possível alterar</string>
+</resources>

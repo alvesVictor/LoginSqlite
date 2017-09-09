@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.victor.myapplication.LogadoActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/userLogado"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+    <Button
+        android:id="@+id/buttonAlterar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="alterarButton"
+        android:text="@string/alterar"
+        android:layout_margin="10dp"
+        android:background="@drawable/botao_customizado"
+        />
+    <Button
+        android:id="@+id/buttonInserir"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="inserirLButton"
+        android:text="@string/inserir"
+        android:layout_margin="10dp"
+        android:background="@drawable/botao_customizado"
+        />
+    <Button
+        android:id="@+id/buttonSair"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="sairButton"
+        android:text="@string/sair"
+        android:layout_margin="10dp"
+        android:background="@drawable/botao_customizado"
+        />
+</LinearLayout>
