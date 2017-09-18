@@ -1,6 +1,5 @@
-package com.example.victor.myapplication;
+package com.example.victor.myapplication.Telas;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,15 +10,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.victor.myapplication.Bean.Usuario;
+import com.example.victor.myapplication.Dao.DatabaseHelper;
+import com.example.victor.myapplication.Dao.UsuarioDao;
+import com.example.victor.myapplication.R;
+
 public class AlterarActivity extends AppCompatActivity {
     private DatabaseHelper helper;
     private EditText senha,nome,status,tipo;
     private TextView login;
     private String user;
+    private UsuarioDao usuarioDao;
+    private Usuario usu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alterar);
+
+        usuarioDao = new UsuarioDao(getBaseContext());
 
         login = (TextView) findViewById(R.id.alterarUsu);
 
@@ -52,18 +60,12 @@ public class AlterarActivity extends AppCompatActivity {
     }
 
     public void alterarButton(View v){
-        SQLiteDatabase db = helper.getReadableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("senha",senha.getText().toString());
-        values.put("nome",nome.getText().toString());
-        values.put("status",status.getText().toString());
-        values.put("tipo",tipo.getText().toString());
-        long resul = db.update("usuario",values,"_id_login = ?",new String[]{user});
-        db.close();
-        if(resul != -1 ){
+        usu = new Usuario(login.getText().toString(),senha.getText().toString(),nome.getText().toString(),tipo.getText().toString(),status.getText().toString());
+        if (usuarioDao.alterarUsuario(usu)){
             Toast.makeText(getApplication(), getString(R.string.sucessoAlterar), Toast.LENGTH_SHORT).show();
             finish();
-        }else{
+        }
+        else{
             Toast.makeText(getApplication(), getString(R.string.erroAlterar), Toast.LENGTH_SHORT).show();
         }
     }

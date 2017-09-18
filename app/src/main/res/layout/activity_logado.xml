@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.victor.myapplication.LogadoActivity"
+    tools:context="com.example.victor.myapplication.Telas.LogadoActivity"
     android:orientation="vertical">
 
     <TextView
@@ -30,6 +30,24 @@
         android:layout_width="match_parent"
         android:onClick="inserirLButton"
         android:text="@string/inserir"
+        android:layout_margin="10dp"
+        android:background="@drawable/botao_customizado"
+        />
+    <Button
+        android:id="@+id/buttonListar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="listarButton"
+        android:text="@string/listar"
+        android:layout_margin="10dp"
+        android:background="@drawable/botao_customizado"
+        />
+    <Button
+        android:id="@+id/buttonExcluir"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="excluirButton"
+        android:text="@string/excluir"
         android:layout_margin="10dp"
         android:background="@drawable/botao_customizado"
         />

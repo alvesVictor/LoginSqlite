@@ -1,4 +1,4 @@
-package com.example.victor.myapplication;
+package com.example.victor.myapplication.Bean;
 
 
 /**
@@ -54,7 +54,7 @@ public class Usuario {
 
     public Usuario(){
 
-    };
+    }
 
     public Usuario(String usuario,String senha){
         this.setUsuario(usuario);

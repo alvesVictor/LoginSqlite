@@ -20,4 +20,10 @@
     <string name="alteração">ALTERAR</string>
     <string name="sucessoAlterar">Alteração realizada com sucesso</string>
     <string name="erroAlterar">Não foi possível alterar</string>
+    <string name="camposObrigatorios">Campos de Usuário e Senha não podem estar vazios</string>
+    <string name="excluir">Excluir</string>
+    <string name="deleteSucesso">Usuário excluido</string>
+    <string name="deleteCancela">Operação cancelada</string>
+    <string name="erroExcluir">Não foi possivel excluir esse usuário</string>
+
 </resources>
